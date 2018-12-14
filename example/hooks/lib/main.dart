@@ -9,7 +9,7 @@ import 'package:todos_repository_flutter/todos_repository_flutter.dart';
 
 void main() {
   runApp(
-    hooksApp(
+    HooksApp(
       repository: TodosRepositoryFlutter(
         fileStorage: FileStorage(
           "hooks_app",

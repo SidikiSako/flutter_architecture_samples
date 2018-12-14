@@ -11,9 +11,13 @@ dependencies:
     path: ../../
   todos_repository_flutter:
     path: ../todos_repository_flutter
+  functional_widget_annotation: 0.1.0
+  flutter_hooks:
+    git: https://github.com/rrousselGit/flutter_hooks
 
 dev_dependencies:
   mockito: ^3.0.0
+  functional_widget: ^0.2.1
   test: ^1.3.0
   flutter_test:
     sdk: flutter
@@ -21,6 +25,11 @@ dev_dependencies:
     sdk: flutter
   integration_tests:
     path: ../integration_tests
+  build_runner:
+
+dependency_overrides:
+  flutter_hooks:
+    path: ../../../flutter_hooks
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec

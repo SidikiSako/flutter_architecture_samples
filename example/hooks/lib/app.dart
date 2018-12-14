@@ -11,18 +11,18 @@ import 'package:hooks/screens/add_edit_screen.dart';
 import 'package:hooks/screens/home_screen.dart';
 import 'package:todos_repository/todos_repository.dart';
 
-class hooksApp extends StatefulWidget {
+class HooksApp extends StatefulWidget {
   final TodosRepository repository;
 
-  hooksApp({@required this.repository});
+  HooksApp({@required this.repository});
 
   @override
   State<StatefulWidget> createState() {
-    return hooksAppState();
+    return HooksAppState();
   }
 }
 
-class hooksAppState extends State<hooksApp> {
+class HooksAppState extends State<HooksApp> {
   AppState appState = AppState.loading();
 
   @override
@@ -54,6 +54,7 @@ class hooksAppState extends State<hooksApp> {
       routes: {
         ArchSampleRoutes.home: (context) {
           return HomeScreen(
+            key: ArchSampleKeys.homeScreen,
             appState: appState,
             updateTodo: updateTodo,
             addTodo: addTodo,
