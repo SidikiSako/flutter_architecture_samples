@@ -195,6 +195,8 @@ class ArchSampleLocalizations {
 
 class ArchSampleLocalizationsDelegate
     extends LocalizationsDelegate<ArchSampleLocalizations> {
+  const ArchSampleLocalizationsDelegate();
+
   @override
   Future<ArchSampleLocalizations> load(Locale locale) =>
       ArchSampleLocalizations.load(locale);

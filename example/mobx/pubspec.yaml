@@ -1,4 +1,4 @@
-name: mobx
+name: mobx_flutter
 version: 1.0.0+1
 
 environment:
@@ -7,9 +7,27 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
+  flutter_architecture_samples:
+    path: ../../
+  todos_repository_flutter:
+    path: ../todos_repository_flutter
+  mobx: '>= 0.0.36 <= 0.1.0'
+  flutter_mobx: '>= 0.0.9 <= 0.1.0'
+  flutter_mobx_hooks:
+    git:
+      url: https://github.com/mobxjs/mobx.dart
+      path: flutter_mobx_hooks
+
+  flutter_hooks: ^0.3.0-dev
+  provider: ^1.4.0
 
 dev_dependencies:
+  mobx_codegen:
+    git:
+      url: https://github.com/mobxjs/mobx.dart
+      path: mobx_codegen
+  build_runner: ^1.2.3
+  build_verify:
   flutter_test:
     sdk: flutter
   flutter_driver:
