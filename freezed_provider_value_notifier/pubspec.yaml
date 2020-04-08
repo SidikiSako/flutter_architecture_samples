@@ -7,23 +7,24 @@ environment:
   sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
-  freezed_annotation: ^0.6.0
+  flutter:
+    sdk: flutter
+  freezed_annotation: ^0.7.1
   provider: ^4.1.0-dev
+  state_notifier: ^0.4.0
+  # example-specific dependencies
   todos_repository_local_storage:
     path: ../todos_repository_local_storage
   todos_app_core:
     path: ../todos_app_core
-  flutter:
-    sdk: flutter
   key_value_store_flutter:
   key_value_store_web:
   shared_preferences:
 
 dev_dependencies:
-  freezed: ^0.6.1
-  build_runner:
-  mockito:
-  test:
+  freezed: ^0.10.4
+  build_runner: ^1.8.1
+  mockito: ^4.1.1
   flutter_test:
     sdk: flutter
   flutter_driver:
