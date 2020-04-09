@@ -12,6 +12,7 @@ dependencies:
   freezed_annotation: ^0.7.1
   provider: ^4.1.0-dev
   state_notifier: ^0.4.0
+  flutter_state_notifier: ^0.4.0
   # example-specific dependencies
   todos_repository_local_storage:
     path: ../todos_repository_local_storage
@@ -22,7 +23,7 @@ dependencies:
   shared_preferences:
 
 dev_dependencies:
-  freezed: ^0.10.4
+  freezed: ^0.10.5
   build_runner: ^1.8.1
   mockito: ^4.1.1
   flutter_test:

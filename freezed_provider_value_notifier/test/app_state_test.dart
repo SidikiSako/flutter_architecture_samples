@@ -76,13 +76,13 @@ void main() {
       final repository = MockRepository(todos);
       final model = TodoListController(todosRepository: repository);
 
-      expect(model.value.loading, isTrue);
-      expect(model.value.todos, []);
+      expect(model.debugState.loading, isTrue);
+      expect(model.debugState.todos, []);
 
-      await Future.doWhile(() => Future.value(model.value.loading));
+      await Future.doWhile(() => Future.value(model.debugState.loading));
 
-      expect(model.value.todos, todos);
-      expect(model.value.loading, isFalse);
+      expect(model.debugState.todos, todos);
+      expect(model.debugState.loading, isFalse);
 
     });
     test('should clear the completed todos', () async {
@@ -98,7 +98,7 @@ void main() {
       model.clearCompleted();
 
       expect(
-        model.value.todos,
+        model.debugState.todos,
         [todo1, todo2],
       );
       expect(repository.saveCount, 1);
@@ -113,12 +113,12 @@ void main() {
 
       // Toggle all complete
       model.toggleAll();
-      expect(model.value.todos.every((t) => t.complete), isTrue);
+      expect(model.debugState.todos.every((t) => t.complete), isTrue);
       expect(repository.saveCount, 1);
 
       // Toggle all incomplete
       model.toggleAll();
-      expect(model.value.todos.every((t) => !t.complete), isTrue);
+      expect(model.debugState.todos.every((t) => !t.complete), isTrue);
       expect(repository.saveCount, 2);
     });
 
@@ -130,7 +130,7 @@ void main() {
       model.addTodo(todo);
 
       expect(
-        model.value.todos,
+        model.debugState.todos,
         [todo],
       );
 
@@ -146,7 +146,7 @@ void main() {
       model.removeTodoWithId(todo.id);
 
       expect(
-        model.value.todos,
+        model.debugState.todos,
         [],
       );
       expect(repository.saveCount, 1);
@@ -166,7 +166,7 @@ void main() {
       model.updateTodo(update);
 
       expect(
-        model.value.todos,
+        model.debugState.todos,
         [todo1, update, todo3],
       );
       expect(repository.saveCount, 1);

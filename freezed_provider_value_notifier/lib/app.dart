@@ -3,7 +3,7 @@
 // in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:freezed_provider_value_notifier/value_notifier_provider.dart';
+import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:meta/meta.dart';
 import 'package:freezed_provider_value_notifier/add_todo_screen.dart';
 import 'package:freezed_provider_value_notifier/localization.dart';
@@ -22,7 +22,7 @@ class ProviderApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueNotifierProvider<TodoListController, TodoList>(
+    return StateNotifierProvider<TodoListController, TodoList>(
       create: (_) => TodoListController(todosRepository: repository),
       child: MaterialApp(
         theme: ArchSampleTheme.theme,
